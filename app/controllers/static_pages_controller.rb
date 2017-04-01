@@ -1,8 +1,11 @@
 # The StaticPageController controller is responsible for dispaly static page like 'home' and 'help'
-class StaticPageController < ApplicationController
+class StaticPagesController < ApplicationController
   def home
   end
 
   def help
+  end
+
+  def about
   end
 end
