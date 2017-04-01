@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-  gem 'pg', '0.20.0'
+  #gem 'pg', '0.20.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,8 +39,17 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   # Use sqlite3 as the database for Active Record
-  # gem 'sqlite3', '1.3.13'
+  gem 'sqlite3', '1.3.13'
+  gem 'guard-rspec'
   gem 'capybara'
+
+  #gem 'spork-rails', '4.0.0'
+  #gem 'guard-spork'
+  #gem 'childprocess'
+end
+
+group :test do
+  gem 'libnotify', '0.8.0'
 end
 
 group :development do
@@ -53,7 +62,7 @@ group :development do
 end
 
 group :production do
-
+  gem 'pg', '0.20.0'
   gem 'rails_12factor'
 end
 
