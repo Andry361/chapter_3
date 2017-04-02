@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
-  #get 'static_pages/home'
-  #get 'static_pages/help'
-  #get "static_pages/about"
-  #get "static_pages/contact"
-  #override
-  #get "/" => "static_pages#home"
-  #get "/about" => "static_pages#about"
-  #get "/help" => "static_pages#help"
-  #get "/contact" => "static_pages#contact"
-  #match '/',    to: 'static_pages#home',    via: 'get'
+   resources :users
    root  'static_pages#home'
    match '/help',    to: 'static_pages#help',    via: 'get'
    match '/signup',  to: 'users#new',            via: 'get'
