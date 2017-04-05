@@ -27,6 +27,9 @@ end
 group :test do
   gem 'libnotify', '0.8.0'
   gem 'factory_girl_rails'
+
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :development do
