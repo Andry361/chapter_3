@@ -1,7 +1,7 @@
 Feature: Signing in
 
   Scenario: Unsuccessful signin
-    Given a user visits the signin page
+    Given a user visits the signin page,
     When they submit invalid signin information
     Then they should see an error message
 
